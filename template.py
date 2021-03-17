@@ -23,7 +23,7 @@ def compile_template(config_file):
             "=styles=",
             "\n".join(
                 [
-                    f"<link rel='stylesheet' href='{style}'/>"
+                    f"<link rel='stylesheet' href='/css/{style}'/>"
                     for style in config_file["styles"]
                 ]
             ),

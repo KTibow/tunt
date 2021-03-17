@@ -1,0 +1,6 @@
+html {
+  --color-1: #4f00ff;
+  --color-2: #00ffdb;
+  background: linear-gradient(-45deg, var(--color-1), var(--color-2));
+  height: 100%;
+}
