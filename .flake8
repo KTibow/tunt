@@ -2,3 +2,7 @@
 format = ${red_bold}%(path)s: ${blue_bold}%(row)d:${green_bold}%(col)d ${purple_bold}%(code)s${reset} %(text)s
 statistics = True
 inline-quotes = double
+
+per-file-ignores =
+  # I need to use assert in tests.
+  tests.py: S101

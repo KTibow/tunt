@@ -4,7 +4,8 @@ import requests
 
 
 def test_homepage_content():
-    """
+    """Verifies the content of the homepage.
+
     Get the content of the home page, and compare it with the actual HTML file.
     This helps guard against general errors, 404, 500, and more errors.
     """
