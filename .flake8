@@ -13,3 +13,5 @@ extend-ignore =
   C812 # trailing commas
   # Personal preferences
   WPS305 # f-strings
+  # Stuff I don't use
+  I # isort
