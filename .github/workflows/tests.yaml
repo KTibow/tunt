@@ -50,4 +50,6 @@ jobs:
       - name: Download test library
         run: python3 -m pip install pytest
       - name: Run tests
-        run: python3 -m pytest tests.py
+        run: |
+          (python3 -m flask run &) &> /dev/null
+          python3 -m pytest tests.py
