@@ -1,8 +1,8 @@
 name: Tests
 
 on:
-  push:
-    branches: [] # change this to [ main ] to enable
+  #push:
+  #  branches: []
   #pull_request:
   #  branches: [ main ]
 
