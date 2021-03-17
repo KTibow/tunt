@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Open+Sans&display=swap");
 html {
   --color-1: #4f00ff;
   --color-2: #00ffdb;
   background: linear-gradient(-45deg, var(--color-1), var(--color-2));
   height: 100%;
+}
+* {
+  font-family: Open Sans;
+}
+h1,
+h2,
+h3 {
+  font-family: Quicksand;
 }
