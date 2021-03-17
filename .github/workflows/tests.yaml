@@ -18,7 +18,7 @@ jobs:
       - name: Download linter library
         run: python3 -m pip install wemake-python-styleguide flake8-colors
       - name: Run linter
-        run: python3 -m flake8 app.py tests.py
+        run: python3 -m flake8 *.py
   formatting:
     name: Check formatting
     runs-on: ubuntu-latest
