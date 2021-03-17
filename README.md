@@ -1,2 +1,2 @@
 # tunt
-Outdoor electronic treasure hunt game.
+Outdoor electronic treasure hunt game. (Tunt comes from **t**reasure h**unt**).
