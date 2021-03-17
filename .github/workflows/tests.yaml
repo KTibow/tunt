@@ -2,9 +2,9 @@ name: Tests
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [] # change this to [ main ] to enable
+  #pull_request:
+  #  branches: [ main ]
 
 jobs:
   flake8:
