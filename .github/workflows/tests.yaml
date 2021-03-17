@@ -1,0 +1,53 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  flake8:
+    name: Check flake8
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download repo
+        uses: actions/checkout@v2
+      - name: Download Python
+        uses: actions/setup-python@v2
+      - name: Download linter library
+        run: python3 -m pip install wemake-python-styleguide
+      - name: Run linter
+        run: python3 -m flake8
+  formatting:
+    name: Check formatting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download repo
+        uses: actions/checkout@v2
+      - name: Download Python
+        uses: actions/setup-python@v2
+      - name: Download node.js
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 14.x
+      - name: Download Python formatter
+        run: python3 -m pip install black
+      - name: Check Python formatting
+        run: python3 -m black . --check
+      - name: Check web formatting
+        run: |
+          npx prettier **/*.js --check
+          npx prettier **/*.css --check
+  tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download repo
+        uses: actions/checkout@v2
+      - name: Download Python
+        uses: actions/setup-python@v2
+      - name: Download test library
+        run: python3 -m pip install pytest
+      - name: Run tests
+        run: python3 -m pytest tests.py
