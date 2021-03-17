@@ -1,8 +1,13 @@
+"""The test program for Tunt."""
+
 import requests
 
 
 def test_homepage_content():
-    home = requests.get("http://127.0.0.1:5000/")
-    original_page = open("assets/home.html")
-    assert home.text == original_page.read()
-    original_page.close()
+    """
+    Get the content of the home page, and compare it with the actual HTML file.
+    This helps guard against general errors, 404, 500, and more errors.
+    """
+    with original_page as open("assets/home.html"):
+        home = requests.get("http://127.0.0.1:5000/")
+        assert home.text == original_page.read()

@@ -54,5 +54,5 @@ jobs:
       - name: Run tests
         run: |
           (python3 -m flask run &) &> /dev/null
-          delay 1
+          sleep 1
           python3 -m pytest tests.py
