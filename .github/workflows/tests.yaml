@@ -53,6 +53,6 @@ jobs:
         run: python3 -m pip install -r requirements.txt
       - name: Run tests
         run: |
-          (python3 -m flask run &) &> /dev/null
+          python3 -m flask run &
           sleep 5
           python3 -m pytest tests.py
