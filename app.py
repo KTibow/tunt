@@ -1,6 +1,6 @@
 """Server program for Tunt."""
 
-from flask import Flask
+from flask import Flask, Response
 import os
 import logging
 import template
@@ -19,18 +19,18 @@ def render_home_page():
         return template.compile_template(home_page)
 
 
-@app.route("/css/<file>")
-def send_css_file(file):
+@app.route("/css/<css_file_name>")
+def send_css_file(css_file_name):
     """Return a CSS file.
 
     Args:
-        file: The name of the CSS file.
+        css_file_name: The name of the CSS file.
 
     Returns:
         The CSS file specified in the URL.
     """
-    with open(f"assets/css/{file}") as css_file:
-        return css_file.read()
+    with open(f"assets/css/{css_file_name}") as css_file:
+        return Response(css_file.read(), mimetype="text/css")
 
 
 if os.getenv("GITHUB_ACTIONS") is not None:
