@@ -7,6 +7,8 @@ max-line-length = 88
 per-file-ignores =
   # I need to use assert in tests.
   tests.py: S101
+  # I need input and "unsafe" command execution.
+  local_actions.py: WPS421, S605, S607
 
 extend-ignore =
   # Black styling
