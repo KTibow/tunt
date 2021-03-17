@@ -16,15 +16,25 @@ def compile_template(config_file):
         A string containing the compiled HTML.
     """
     config_file = yaml.safe_load(config_file)
-    compiled_styles = ""
-    compiled_scripts = ""
-    for style in config_file["styles"]:
-        compiled_styles += f"<link rel='stylesheet' href='{style}'/>"
-    for script in config_file["scripts"]:
-        compiled_scripts += f"<script src='{script}'></script>"
     return (
         base_html.replace("=title=", config_file["title"])
         .replace("=content=", config_file["content"])
-        .replace("=styles=", compiled_styles)
-        .replace("=scripts=", compiled_scripts)
+        .replace(
+            "=styles=",
+            "\n".join(
+                [
+                    f"<link rel='stylesheet' href='{style}'/>"
+                    for style in config_file["styles"]
+                ]
+            ),
+        )
+        .replace(
+            "=scripts=",
+            "\n".join(
+                [
+                    f"<script src='{script}'></script>"
+                    for script in config_file["scripts"]
+                ]
+            ),
+        )
     )
