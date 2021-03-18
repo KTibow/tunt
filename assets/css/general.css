@@ -9,15 +9,6 @@ html {
 * {
   font-family: Open Sans;
 }
-h1,
-h2,
-h3 {
-  font-family: Quicksand;
-  display: inline-block;
-  background: #fff2;
-  font-size: min(300px, 20vh);
-  padding: calc(1em / 3);
-}
 .center {
   text-align: center;
 }

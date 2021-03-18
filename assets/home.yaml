@@ -1,9 +1,16 @@
 title: Home | Tunt
 content: |
   <div class="center">
-    <h1>Tunt</h1>
+    <h1 class="big">Tunt</h1>
+    <br>
+    <h3 class="big">Let's start playing. Choose one.</h3>
+    <br>
+    <div class="center">
+      <button id="newGame">Setup a game</button>
+      <button id="playGame">Play a game</button>
+    </div>
   </div>
-  <p>Let's start playing.</p>
 scripts: []
 styles:
   - general.css
+  - landing.css
