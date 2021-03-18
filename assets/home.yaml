@@ -1,6 +1,8 @@
 title: Home | Tunt
 content: |
-  <h1>Tunt</h1>
+  <div class="center">
+    <h1>Tunt</h1>
+  </div>
   <p>Let's start playing.</p>
 scripts: []
 styles:

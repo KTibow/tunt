@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 html {
   --color-1: #4f00ff;
   --color-2: #00ffdb;
@@ -12,4 +13,11 @@ h1,
 h2,
 h3 {
   font-family: Quicksand;
+  display: inline-block;
+  background: #fff2;
+  font-size: min(300px, 20vh);
+  padding: calc(1em / 3);
+}
+.center {
+  text-align: center;
 }
