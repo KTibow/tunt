@@ -1,0 +1,14 @@
+title: Server Error | Tunt
+content: |
+  <div class="center">
+    <h1>Server Error</h1>
+    <br>
+    <h3>Something went wrong in the backend of the server.</h3>
+    <br>
+    <button id="goHome">Go to the home page</button>
+  </div>
+scripts:
+  - error.js
+styles:
+  - general.css
+  - 500.css

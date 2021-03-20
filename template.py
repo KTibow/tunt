@@ -20,7 +20,10 @@ def compile_template(config_file):
         ]
     )
     scripts = "\n".join(
-        [f"<script src='/asset/js/{script}'></script>" for script in config_file["scripts"]]
+        [
+            f"<script src='/asset/js/{script}'></script>"
+            for script in config_file["scripts"]
+        ]
     )
     return f"""
 <!DOCTYPE html>

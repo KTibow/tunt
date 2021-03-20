@@ -1,0 +1,74 @@
+html {
+  --color-1: #fff900;
+  --color-2: #ff5b00;
+}
+h1,
+h3 {
+  font-family: Quicksand;
+  display: inline-block;
+  border-radius: 0.15em;
+}
+h1 {
+  background: #fff2;
+  font-size: min(200px, 12vmin);
+  padding: calc(1em / 3);
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+  animation: infinite 0.7s glitch;
+}
+h3 {
+  background: #fff3;
+  padding: 0.5em;
+}
+button {
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  height: 125px;
+  width: 200px;
+  font-size: 1.1em;
+  border: none;
+  background: #fff2;
+}
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 #f00b, -0.025em -0.05em #0f0b, 0.025em 0.05em #00fb;
+  }
+  24% {
+    text-shadow: 0.05em 0 #f00b, -0.025em -0.05em #0f0b, 0.025em 0.05em #00fb;
+  }
+  25% {
+    text-shadow: -0.05em 0 #f00b, -0.025em 0.05em #0f0b, -0.025em 0.05em #00fb;
+  }
+  49% {
+    text-shadow: -0.05em 0 #f00b, -0.025em 0.05em #0f0b, -0.025em 0.05em #00fb;
+  }
+  50% {
+    text-shadow: -0.025em 0 #f005, -0.0125em -0.025em #0f05,
+      0.0125em 0.025em #00f5;
+  }
+  74% {
+    text-shadow: -0.025em 0 #f005, -0.0125em -0.025em #0f05,
+      0.0125em 0.025em #00f5;
+  }
+  75% {
+    text-shadow: 0.05em 0 #f00b, -0.025em -0.05em #0f0b, 0.025em 0.05em #00fb;
+  }
+  99% {
+    text-shadow: 0.05em 0 #f00b, -0.025em -0.05em #0f0b, 0.025em 0.05em #00fb;
+  }
+  100% {
+    text-shadow: 0.05em 0 #f00b, -0.025em -0.05em #0f0b, 0.025em 0.05em #00fb;
+  }
+}
+h1 span {
+  font-family: Quicksand;
+}
+.glitch-copy {
+  transform: translateX(-0.05em);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+  position: absolute;
+}
+.glitch-original {
+  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+}
