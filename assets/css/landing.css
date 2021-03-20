@@ -26,3 +26,9 @@ button {
   border: none;
   background: #fff2;
 }
+audio {
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

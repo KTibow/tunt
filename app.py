@@ -30,7 +30,7 @@ def send_asset(asset_file_name):
     Returns:
         The asset specified in the URL.
     """
-    with open(f"assets/{asset_file_name}") as asset_file:
+    with open(f"assets/{asset_file_name}", "rb") as asset_file:
         mime_type = mimetypes.guess_type(asset_file_name)[0]
         return Response(asset_file.read(), mimetype=mime_type)
 

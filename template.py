@@ -31,6 +31,7 @@ def compile_template(config_file):
     <head>
         <title>{config_file["title"]}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="/asset/general_files/tunt-logo.png"/>
         {styles}
     </head>
     <body>

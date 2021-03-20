@@ -10,7 +10,11 @@ content: |
       <button id="playGame">Play a game</button>
     </div>
   </div>
-scripts: []
+  <audio autoplay loop controls>
+    <source src="/asset/general_files/stairway-by-patrick-patrikios.mp3">
+  </audio>
+scripts:
+  - home.js
 styles:
   - general.css
   - landing.css
