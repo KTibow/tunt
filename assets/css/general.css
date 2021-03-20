@@ -6,8 +6,10 @@ html {
   --color-2: #00ffdb;
   background: linear-gradient(-45deg, var(--color-1), var(--color-2));
   height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
 }
-body {
+body, main {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,3 +1,7 @@
+/* Landing styles */
+body {
+  min-height: calc(100vh - 16px);
+}
 h1.big,
 h3.big {
   font-family: Quicksand;
@@ -27,9 +31,33 @@ button {
   border-radius: 3px;
   background: #fff2;
 }
+/* Background music styling */
 audio {
-  opacity: 0.3;
+  display: none;
+}
+.material-icons {
+  vertical-align: text-top;
+}
+.audioControls {
+  background: #0002;
   position: absolute;
+  display: inline-block;
+  height: 24px;
+  padding: 8px;
   right: 0;
   bottom: 0;
+  text-align: center;
+  color: white;
+}
+.audioControls span {
+  cursor: pointer;
+  background: #0002;
+  color: white;
+}
+.audioControlMenu {
+  background: #fff2;
+  padding: 25px;
+  width: 700px;
+  height: 450px;
+  display: none;
 }
