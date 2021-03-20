@@ -35,10 +35,10 @@ jobs:
         run: python3 -m pip install black
       - name: Check Python formatting
         run: python3 -m black . --check
-      #- name: Check web formatting
-      #  run: |
-      #    npx prettier **/*.js --check
-      #    npx prettier **/*.css --check
+      - name: Check web formatting
+        run: |
+          npx prettier **/*.js --check
+          npx prettier **/*.css --check
   tests:
     name: Run tests
     runs-on: ubuntu-latest
