@@ -1,49 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons&display=swap");
 html {
   --color-1: #4f00ff;
   --color-2: #00ffdb;
   background: linear-gradient(-45deg, var(--color-1), var(--color-2));
   height: 100%;
 }
-* {
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body > * {
   font-family: Open Sans;
-}
-.center {
-  text-align: center;
-}
-@keyframes jiggle {
-  0% {
-    transform: skewX(9deg);
-  }
-  10% {
-    transform: skewX(-8deg);
-  }
-  20% {
-    transform: skewX(7deg);
-  }
-  30% {
-    transform: skewX(-6deg);
-  }
-  40% {
-    transform: skewX(5deg);
-  }
-  50% {
-    transform: skewX(-4deg);
-  }
-  60% {
-    transform: skewX(3deg);
-  }
-  70% {
-    transform: skewX(-2deg);
-  }
-  80% {
-    transform: skewX(1deg);
-  }
-  90% {
-    transform: skewX(0deg);
-  }
-  100% {
-    transform: skewX(0deg);
-  }
 }

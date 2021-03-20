@@ -63,6 +63,7 @@ button {
 }
 h1 span {
   font-family: Quicksand;
+  white-space: nowrap;
 }
 .glitch-copy {
   transform: translateX(-0.05em);

@@ -23,10 +23,11 @@ h1 {
   background: #fff2;
   font-size: min(200px, 12vmin);
   padding: calc(1em / 3);
-  margin-block-start: 0.6em;
-  margin-block-end: 0.3em;
+  margin-block-start: 0.3em;
+  margin-block-end: 0.6em;
   animation: 1.5s fall;
   transform: rotate(10deg);
+  transform-origin: left;
 }
 h3 {
   background: #fff3;

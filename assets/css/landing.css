@@ -24,6 +24,7 @@ button {
   width: 125px;
   font-size: 1.1em;
   border: none;
+  border-radius: 3px;
   background: #fff2;
 }
 audio {

@@ -1,15 +1,11 @@
 title: Not Found | Tunt
 content: |
-  <div class="center">
-    <h1>
-      <span class="glitch-copy">Page Not Found</span>
-      <span class="glitch-original">Page Not Found</span>
-    </h1>
-    <br>
-    <h3>404. Maybe try checking that you spelled everything correctly.</h3>
-    <br>
-    <button id="goHome">Go to the home page</button>
-  </div>
+  <h1>
+    <span class="glitch-copy">Page Not Found</span>
+    <span class="glitch-original">Page Not Found</span>
+  </h1>
+  <h3>404. Maybe try checking that you spelled everything correctly.</h3>
+  <button id="goHome">Go to the home page</button>
 scripts:
   - error.js
 styles:
