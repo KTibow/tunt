@@ -4,7 +4,8 @@
 html {
   --color-1: #4f00ff;
   --color-2: #00ffdb;
-  background: linear-gradient(-45deg, var(--color-1), var(--color-2));
+  background-image: -mslinear-gradient(-45deg, #4f00ff, #00ffdb);
+  background-image: linear-gradient(-45deg, var(--color-1), var(--color-2));
   height: 100%;
   background-size: cover;
   background-attachment: fixed;
