@@ -33,7 +33,8 @@ button {
 }
 /* Background music styling */
 audio {
-  display: none;
+  margin: 20px auto;
+  display: block;
 }
 .material-icons {
   vertical-align: text-top;
@@ -57,7 +58,8 @@ audio {
 .audioControlMenu {
   background: #fff2;
   padding: 25px;
-  width: 700px;
-  height: 450px;
+  width: min(700px, 80vw);
+  height: min(450px, 80vh);
   display: none;
+  border-radius: 5px;
 }

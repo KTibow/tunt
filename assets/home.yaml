@@ -8,17 +8,19 @@ content: |
       <button id="playGame">Play a game</button>
     </div>
   </main>
-  <audio autoplay loop controls>
-    <source src="/asset/general_files/stairway-by-patrick-patrikios.mp3">
-  </audio>
   <div class="audioControls">
     Music
     <span class="material-icons" id="music_controls">more_vert</span>
   </div>
   <div class="audioControlMenu">
-    <button id="toggleMusic">Pause music</button>
-    Always <span id="audioPreference">play</span> music
-    <button id="toggleMusicPreference">Toggle preference</button>
+    <audio autoplay loop controls>
+      <source src="/asset/general_files/stairway-by-patrick-patrikios.mp3">
+    </audio>
+    For this browser, never play music
+    <label class="switch">
+      <input type="checkbox" autocomplete="off">
+      <span class="slider"></span>
+    </label>
   </div>
 scripts:
   - home.js
