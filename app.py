@@ -6,7 +6,13 @@ import logging
 import template
 import mimetypes
 
+# All range request imports
+from datetime import datetime
+from flask_rangerequest import RangeRequest
+from os import path
+
 app = Flask(__name__)
+server_boot_time = datetime.utcnow()
 
 
 @app.route("/")
@@ -30,9 +36,18 @@ def send_asset(asset_file_name):
     Returns:
         The asset specified in the URL.
     """
-    with open(f"assets/{asset_file_name}", "rb") as asset_file:
-        mime_type = mimetypes.guess_type(asset_file_name)[0]
-        return Response(asset_file.read(), mimetype=mime_type)
+    asset_path = f"assets/{asset_file_name}"
+    asset_size = path.getsize(asset_path)
+    with open(asset_path, "rb") as asset_file:
+        asset_etag = RangeRequest.make_etag(asset_file)
+    asset_response = RangeRequest(
+        open(asset_path, "rb"),
+        etag=asset_etag,
+        last_modified=server_boot_time,
+        size=asset_size,
+    ).make_response()
+    asset_response.mimetype = mimetypes.guess_type(asset_file_name)[0]
+    return asset_response
 
 
 http_internal_server_error = 500

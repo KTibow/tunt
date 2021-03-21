@@ -38,6 +38,7 @@ audio {
 }
 .material-icons {
   vertical-align: text-top;
+  user-select: none;
 }
 .audioControls {
   background: #0002;
