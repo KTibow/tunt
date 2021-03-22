@@ -1,8 +1,11 @@
 window.audioHasPlayed = false;
 window.shouldPlayAudio = !JSON.parse(localStorage.getItem("audioDisabled"));
 document.body.onclick = () => {
-  if (!window.audioHasPlayed && window.shouldPlayAudio)
+  if (!window.audioHasPlayed && window.shouldPlayAudio) {
     document.querySelector("audio").play();
+    document.querySelector("audio").currentTime =
+      localStorage.getItem("audioTime") || 0;
+  }
   window.audioHasPlayed = true;
 };
 
@@ -25,3 +28,17 @@ document.querySelector(".switch input").onclick = () => {
   window.shouldPlayAudio = !window.shouldPlayAudio;
   localStorage.setItem("audioDisabled", !window.shouldPlayAudio);
 };
+
+const saveCurrentTime = () => {
+  if (window.audioHasPlayed) {
+    localStorage.setItem(
+      "audioTime",
+      document.querySelector("audio").currentTime
+    );
+  }
+};
+for (element of document.querySelectorAll("button")) {
+  element.addEventListener("click", saveCurrentTime);
+}
+document.body.addEventListener("click", saveCurrentTime);
+window.onbeforeunload = saveCurrentTime;

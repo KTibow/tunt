@@ -23,7 +23,7 @@ content: |
     </label>
   </div>
 scripts:
-  - home.js
+  - audio.js
 styles:
   - general.css
   - landing.css
