@@ -1,6 +1,6 @@
 """Server program for Tunt."""
 
-from flask import Flask, Response
+from flask import Flask
 import os
 import logging
 import template
@@ -9,7 +9,6 @@ import mimetypes
 # All range request imports
 from datetime import datetime
 from flask_rangerequest import RangeRequest
-from os import path
 
 app = Flask(__name__)
 server_boot_time = datetime.utcnow()
@@ -37,11 +36,11 @@ def send_asset(asset_file_name):
         The asset specified in the URL.
     """
     asset_path = f"assets/{asset_file_name}"
-    asset_size = path.getsize(asset_path)
+    asset_size = os.path.getsize(asset_path)
     with open(asset_path, "rb") as asset_file:
         asset_etag = RangeRequest.make_etag(asset_file)
     asset_response = RangeRequest(
-        open(asset_path, "rb"),
+        open(asset_path, "rb"),  # noqa: WPS515
         etag=asset_etag,
         last_modified=server_boot_time,
         size=asset_size,

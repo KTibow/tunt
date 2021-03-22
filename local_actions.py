@@ -11,7 +11,13 @@ if option == 1:
     os.system("python -m flake8 .")
 elif option == 2:
     os.system(
-        r"python -m black . && npx prettier **\*.css --write && npx prettier **\*.js --write"
+        " && ".join(
+            [
+                "python -m black .",
+                r"npx prettier **\*.css --write",
+                r"npx prettier **\*.js --write",
+            ]
+        )
     )
 elif option == 3:
     os.system("python -m flask run")
