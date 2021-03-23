@@ -1,18 +1,14 @@
 title: Home | Tunt
 content: |
-  <main>
-    <h1 class="big">Tunt</h1>
-    <h3 class="big">Let's start playing. Choose one.</h3>
-    <div>
-      <button id="newGame">Setup a game</button>
-      <button id="playGame">Play a game</button>
-    </div>
+  <main class="printHide">
+    <h1 class="big">New Tunt game</h1>
+    <h3 class="big">Let's set up a game.</h3>
   </main>
-  <div class="audioControls">
+  <div class="audioControls" class="printHide">
     Music
     <span class="material-icons" id="music_controls">more_vert</span>
   </div>
-  <div class="audioControlMenu">
+  <div class="audioControlMenu" class="printHide">
     <audio autoplay loop controls>
       <source src="/asset/general_files/stairway-by-patrick-patrikios.mp3">
     </audio>
@@ -22,9 +18,10 @@ content: |
       <span class="slider"></span>
     </label>
   </div>
+  <div class="printShow">
+  </div>
 scripts:
   - audio.js
-  - homeButtons.js
 styles:
   - general.css
-  - landing.css
+  - newGame.css
