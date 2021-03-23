@@ -4,7 +4,7 @@ content: |
   <h3>Something went wrong in the backend of the server.</h3>
   <button id="goHome">Go to the home page</button>
 scripts:
-  - error.js
+  - errorButtons.js
 styles:
   - general.css
   - 500.css
