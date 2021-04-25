@@ -7,16 +7,17 @@ h3.big {
   font-family: Quicksand;
   display: inline-block;
   border-radius: 0.15em;
+  color: white;
 }
 h1.big {
-  background: #fff2;
+  background: #0002;
   font-size: min(150px, 10vmin);
   padding: calc(1em / 3);
   margin-block-start: 0.3em;
   margin-block-end: 0.3em;
 }
 h3.big {
-  background: #fff3;
+  background: #0003;
   padding: 0.5em;
 }
 button {
@@ -24,12 +25,66 @@ button {
   cursor: pointer;
   margin: 10px;
   padding: 10px;
-  height: 200px;
-  width: 125px;
+  height: 65px;
+  width: 104px;
   font-size: 1.1em;
   border: none;
   border-radius: 3px;
-  background: #fff2;
+  background: #0002;
+  color: white;
+}
+/* Input stuff */
+.bigInput {
+  border: none;
+  background: #0003;
+  color: white;
+  font-size: 1.3em;
+  padding: 0.25em;
+  text-align: center;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.bigInput::-webkit-outer-spin-button,
+.bigInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Card sheet styling */
+.card {
+  width: 20vw;
+  height: 20vh;
+  border: solid 0.5vmax #333;
+  border-radius: 1vmax;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1vmin;
+  margin: 1vmin;
+}
+.qrCode {
+  align-self: center;
+  width: 10vmin;
+  height: 10vmin;
+  /* Firefox and Chrome support */
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  margin-left: calc(10vw - 5vmin);
+  /*
+  Normally be the same distance from the top as the QR code is from the left
+  But don't push the tunt.herokuapp.com text off the card
+  */
+  margin-top: min(calc(10vw - 5vmin), calc(10vh - 1em));
+}
+.domain {
+  display: flex;
+  align-self: end;
+  font-size: 0.97em;
+}
+.fancyDomain {
+  background: linear-gradient(135deg, var(--color-1), var(--color-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: bold;
+  color: transparent;
 }
 /* Background music styling */
 audio {
@@ -73,13 +128,14 @@ audio {
   body {
     background: white;
   }
-  .printHide {
+  .printHide,
+  .printHide * {
     display: none !important;
-    visibility: hidden;
-    background: transparent;
-    color: transparent;
   }
   .printShow {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
   }
 }

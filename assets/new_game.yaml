@@ -2,13 +2,15 @@ title: Home | Tunt
 content: |
   <main class="printHide">
     <h1 class="big">New Tunt game</h1>
-    <h3 class="big">Let's set up a game.</h3>
+    <h3 class="big">How many clues do you want?</h3>
+    <input type="number" class="bigInput">
+    <button>Print clues</button>
   </main>
-  <div class="audioControls" class="printHide">
+  <div class="audioControls printHide">
     Music
     <span class="material-icons" id="music_controls">more_vert</span>
   </div>
-  <div class="audioControlMenu" class="printHide">
+  <div class="audioControlMenu printHide">
     <audio autoplay loop controls>
       <source src="/asset/general_files/stairway-by-patrick-patrikios.mp3">
     </audio>
@@ -18,10 +20,22 @@ content: |
       <span class="slider"></span>
     </label>
   </div>
+  <template>
+    <div class="card">
+      <img class="qrCode"/>
+      <span class="domain">
+        <span class="fancyDomain">
+          tunt
+        </span>
+        .herokuapp.com
+      </span>
+    </div>
+  </template>
   <div class="printShow">
   </div>
 scripts:
   - audio.js
+  - cardPrinter.js
 styles:
   - general.css
   - newGame.css
