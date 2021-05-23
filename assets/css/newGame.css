@@ -60,6 +60,12 @@ button {
   padding: 1vmin;
   margin: 1vmin;
 }
+.row {
+  display: flex;
+}
+.row:nth-of-type(4n) {
+  page-break-after: always;
+}
 .qrCode {
   align-self: center;
   width: 10vmin;

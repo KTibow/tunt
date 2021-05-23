@@ -4,7 +4,7 @@ content: |
     <h1 class="big">New Tunt game</h1>
     <h3 class="big">How many clues do you want?</h3>
     <input type="number" class="bigInput">
-    <button>Print clues</button>
+    <button onclick="createCards()">Print clues</button>
   </main>
   <div class="audioControls printHide">
     Music
