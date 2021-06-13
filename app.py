@@ -36,6 +36,17 @@ def render_new_game_page():
         return template.compile_template(new_game_page)
 
 
+@app.route("/play_game/")
+def render_play_game_page():
+    """Return the HTML of the page for playing the game.
+
+    Returns:
+        The HTML of the page for playing the game.
+    """
+    with open("assets/play_game.yaml") as play_game_page:
+        return template.compile_template(play_game_page)
+
+
 @app.route("/asset/<path:asset_file_name>")
 def send_asset(asset_file_name):
     """Return an asset.

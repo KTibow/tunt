@@ -13,11 +13,11 @@ window.audioControlsMenuOpen = false;
 document.querySelector(".audioControls span").onclick = () => {
   if (window.audioControlsMenuOpen) {
     document.querySelector("body").style.justifyContent = "";
-    document.querySelector("main").style.display = "";
+    document.querySelectorAll("main").forEach((mainTag) => {mainTag.style.display = "";});
     document.querySelector(".audioControlMenu").style.display = "none";
   } else {
     document.querySelector("body").style.justifyContent = "center";
-    document.querySelector("main").style.display = "none";
+    document.querySelectorAll("main").forEach((mainTag) => {mainTag.style.display = "none";});
     document.querySelector(".audioControlMenu").style.display = "unset";
   }
   window.audioControlsMenuOpen = !window.audioControlsMenuOpen;

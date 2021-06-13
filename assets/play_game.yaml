@@ -1,0 +1,44 @@
+title: Playing Tunt
+content: |
+  <header>Tunt</header>
+  <main id="mainLayout">
+    <button class="scan-button">Scan</button>
+    <h3 id="bad-colors"></h3> <!-- Don't go to... -->
+    <h3>Clue history:</h3>
+    <ul></ul>
+    <button class="chat-button"><i class="material-icons">chat</i></button>
+  </main>
+  <main id="scanLayout" hidden>
+    <h1>Scan</h1>
+    <video id="scanPreview">
+  </main>
+  <main id="chatLayout" hidden>
+    <h1>Chat</h1>
+    <button class="material-icons close-button">close</button>
+    <ul class="chat">
+    </ul>
+    <div id="sendChatUI">
+      <input type="text" id="chatBox">
+      <button id="sendChat">Send</button>
+    </div>
+  </main>
+  <div class="audioControls">
+    Music
+    <span class="material-icons" id="music_controls">more_vert</span>
+  </div>
+  <div class="audioControlMenu">
+    <audio autoplay loop controls>
+      <source src="/asset/general_files/stairway-by-patrick-patrikios.mp3">
+    </audio>
+    For this browser, never play music
+    <label class="switch">
+      <input type="checkbox" autocomplete="off">
+      <span class="slider"></span>
+    </label>
+  </div>
+scripts:
+  - audio.js
+  - game.js
+styles:
+  - general.css
+  - game.css
